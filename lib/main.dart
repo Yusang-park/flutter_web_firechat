@@ -33,7 +33,7 @@ class _MyAppState extends State<MyApp> {
         loadFirebase();
       });
     } catch (e) {
-      // Set `_error` state to true if Firebase initialization fails
+      // Set `_error` stat7e to true if Firebase initialization fails
       setState(() {
         _error = true;
       });
