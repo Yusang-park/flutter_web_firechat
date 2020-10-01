@@ -208,7 +208,7 @@ class _ChatScreenState extends State<ChatScreen> {
                 decoration: InputDecoration.collapsed(hintText: '대화를 입력하세요.'),
                 textInputAction: TextInputAction.done,
                 onSubmitted: (value) {
-                  if (value != null)
+                  if (sendController.text.isNotEmpty)
                     _sendMessage(sendController.text, widget.nickname);
                   _focusnode.requestFocus();
                 },
