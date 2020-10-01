@@ -144,6 +144,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
   TextEditingController sendController = TextEditingController();
   ScrollController _scrollController = ScrollController();
+  FocusNode _focusnode = FocusNode();
   @override
   void initState() {
     // TODO: implement initState
@@ -201,12 +202,15 @@ class _ChatScreenState extends State<ChatScreen> {
             Expanded(
               flex: 9,
               child: TextField(
+                focusNode: _focusnode,
                 controller: sendController,
                 textAlign: TextAlign.left,
                 decoration: InputDecoration.collapsed(hintText: '대화를 입력하세요.'),
                 textInputAction: TextInputAction.done,
                 onSubmitted: (value) {
-                  _sendMessage(sendController.text, widget.nickname);
+                  if (value != null)
+                    _sendMessage(sendController.text, widget.nickname);
+                  _focusnode.requestFocus();
                 },
               ),
             ),
@@ -214,7 +218,8 @@ class _ChatScreenState extends State<ChatScreen> {
               icon: Icon(Icons.send),
               color: Colors.blue,
               onPressed: () {
-                _sendMessage(sendController.text, widget.nickname);
+                if (sendController.text.isNotEmpty)
+                  _sendMessage(sendController.text, widget.nickname);
               },
             )
           ],
