@@ -65,7 +65,7 @@ class _JoinScreenState extends State<JoinScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      '익명 채팅에 오신 것을 환영합니다. \ndev by pitter Park\nversion. 1.3',
+                      '익명 채팅에 오신 것을 환영합니다. \ndev by pitter Park\nversion. 1.5',
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(
