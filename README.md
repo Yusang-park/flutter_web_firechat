@@ -1,6 +1,9 @@
 # firechat
 
-A new Flutter project.
+it is simple chatting web created by flutter.
+using firebase as server.
+it was made simply for my practice.
+
 
 ## Getting Started
 
