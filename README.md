@@ -5,7 +5,7 @@ using firebase as server.
 it was made simply for my practice.
 
 
-## Getting Started
+## Introduce
 
 This project is a starting point for a Flutter application.
 
